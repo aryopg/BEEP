@@ -1,2 +1,4 @@
-*
+data/models
+data/mechanical_ventilation
+datasets/
 !.gitignore

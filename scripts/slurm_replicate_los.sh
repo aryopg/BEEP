@@ -35,7 +35,7 @@ rsync --archive --update --compress --progress ${src_path}/ ${dest_dataset_path}
 
 src_model_checkpoint_path=/home/${USER}/${PROJECT_NAME}/data/models/outcome-models/los_umlsbert_average_k5.pt
 dest_model_checkpoint_path=${SCRATCH_HOME}/${PROJECT_NAME}/data/models/outcome-models/los_umlsbert_average_k5.pt
-mkdir -p ${dest_path}  # make it if required
+mkdir -p ${dest_model_checkpoint_path}  # make it if required
 rsync --archive --update --compress --progress ${src_model_checkpoint_path} ${dest_model_checkpoint_path}
 
 OUTPUT_DIR=${SCRATCH_HOME}/${PROJECT_NAME}/outputs/

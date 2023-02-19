@@ -22,10 +22,11 @@ SCRATCH_HOME=${SCRATCH_DISK}/${USER}
 mkdir -p ${SCRATCH_HOME}
 
 # Activate your conda environment
-PROJECT_NAME="spike-protein-gan"
-echo "Activating conda environment: ${PROJECT_NAME}"
-conda activate ${PROJECT_NAME}
+ENV_NAME=beep-env
+echo "Activating conda environment: ${ENV_NAME}"
+conda activate ${ENV_NAME}
 
+PROJECT_NAME="BEEP"
 echo "Moving input data to the compute node's scratch space: $SCRATCH_DISK"
 src_path=/home/${USER}/${PROJECT_NAME}/datasets/
 dest_dataset_path=${SCRATCH_HOME}/${PROJECT_NAME}/datasets/

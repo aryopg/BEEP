@@ -56,12 +56,12 @@ python run_outcome_prediction.py \
 --test ${dest_dataset_path}/length_of_stay/LOS_WEEKS_adm_test.csv \
 --init_model "bionlp/bluebert_pubmed_mimic_uncased_L-12_H-768_A-12" \
 --out_dir ${OUTPUT_DIR} \
---checkpoint ${dest_model_checkpoint_path}/los_bluebert_softvote_k5.pt \
+--checkpoint ${dest_model_checkpoint_path}/los_bluebert_$1_k$2.pt \
 --outcome los \
 --do_test \
---strategy average \
+--strategy $1 \
 --lit_dir ${dest_retrieved_docs_path} \
---num_top_docs 5
+--num_top_docs $2
 
 
 OUTPUT_HOME=${PWD}/exps/
